@@ -181,7 +181,7 @@
     /* Scope grids */
     .scope-big-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 18px;
       margin-bottom: 10px;
     }
@@ -221,10 +221,10 @@
     .scope-card-big.accent-green  { border-top-color: var(--green); }
 
     .scope-big-title {
-      font-size: 14px; font-weight: 700; color: var(--navy); line-height: 1.3;
+      font-size: 17px; font-weight: 700; color: var(--navy); line-height: 1.3;
     }
     .scope-big-desc {
-      font-size: 12px; color: var(--gray-600); line-height: 1.55; flex: 1;
+      font-size: 14px; color: #5c5c5c; line-height: 1.55; flex: 1;
     }
     .scope-big-footer {
       display: flex; align-items: center; justify-content: space-between;
@@ -248,10 +248,10 @@
       gap: 6px;
     }
     .scope-small-title {
-      font-size: 12.5px; font-weight: 600; color: var(--navy); line-height: 1.3;
+      font-size: 15.5px; font-weight: 600; color: var(--navy); line-height: 1.3;
     }
     .scope-small-desc {
-      font-size: 11.5px; color: var(--gray-600); line-height: 1.5; flex: 1;
+      font-size: 13.5px; color: #5c5c5c; line-height: 1.5; flex: 1;
     }
     .scope-small-est {
       font-size: 10.5px; font-weight: 600; color: var(--gray-400);
@@ -354,8 +354,8 @@
       display: flex; flex-direction: column; gap: 6px;
       box-shadow: 0 1px 5px rgba(26,44,82,0.06);
     }
-    .feature-title { font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.3; }
-    .feature-desc  { font-size: 11.5px; color: var(--navy); line-height: 1.5; }
+    .feature-title { font-size: 16px; font-weight: 600; color: var(--navy); line-height: 1.3; }
+    .feature-desc  { font-size: 13.5px; color: #5c5c5c; line-height: 1.5; }
     .feature-tag {
       display: inline-flex; align-items: center;
       font-size: 9.5px; font-weight: 700; letter-spacing: 0.07em;
@@ -379,8 +379,8 @@
       letter-spacing: 0.1em; color: var(--green-dark);
       white-space: nowrap; padding-top: 4px; flex-shrink: 0;
     }
-    .major-release-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
-    .major-release-desc  { font-size: 12.5px; color: var(--gray-600); line-height: 1.55; }
+    .major-release-title { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
+    .major-release-desc  { font-size: 14.5px; color: #5c5c5c; line-height: 1.55; }
 
     /* ── SECTION HEADS ─────────────────────────────────────── */
     .section-head {
@@ -415,11 +415,11 @@
     .section-dot.upcoming { background: var(--blue);  box-shadow: 0 0 0 3px rgba(46,127,194,0.2); }
     .section-head-body { flex: 1; }
     .section-head-title {
-      font-size: 14px; font-weight: 800; color: var(--navy);
+      font-size: 17px; font-weight: 800; color: var(--navy);
       text-transform: uppercase; letter-spacing: 0.14em;
     }
     .section-head-sub {
-      font-size: 11px; color: var(--gray-400); margin-top: 3px; font-weight: 500;
+      font-size: 13px; color: #5c5c5c; margin-top: 3px; font-weight: 500;
     }
     .section-head-pill {
       font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
@@ -462,10 +462,10 @@
       background: rgba(255,255,255,0.35); flex-shrink: 0;
     }
     .scope-dark-title {
-      font-size: 15px; font-weight: 700; color: var(--white); line-height: 1.25;
+      font-size: 18px; font-weight: 700; color: var(--white); line-height: 1.25;
     }
     .scope-dark-desc {
-      font-size: 12px; color: rgba(255,255,255,0.48); line-height: 1.65; flex: 1;
+      font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.65; flex: 1;
     }
     .scope-dark-footer {
       padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); margin-top: auto;
@@ -487,24 +487,45 @@
       background: var(--white); border: 1px solid var(--gray-200);
       border-radius: var(--radius); box-shadow: 0 1px 5px rgba(26,44,82,0.06);
     }
-    .fix-card summary {
-      list-style: none; padding: 13px 38px 13px 16px;
-      cursor: pointer; display: flex; flex-direction: column;
-      gap: 5px; user-select: none; position: relative;
+    .fix-list {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      box-shadow: 0 1px 5px rgba(26,44,82,0.06);
+      overflow: hidden;
     }
-    .fix-card summary::-webkit-details-marker { display: none; }
-    .fix-card summary::marker { display: none; }
-    .fix-card summary::after {
-      content: '+'; position: absolute; right: 14px; top: 13px;
-      font-size: 18px; line-height: 1; color: var(--gray-400); font-weight: 300;
+    .fix-list-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--gray-100);
+      background: var(--gray-50);
     }
-    .fix-card[open] summary::after { content: '\2212'; }
-    .fix-card summary:hover { background: var(--gray-50); border-radius: var(--radius); }
+    .fix-list-count {
+      font-size: 11px; font-weight: 600; color: var(--gray-400);
+      text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .fix-expand-btn {
+      font-size: 11px; font-weight: 700; color: var(--blue);
+      background: rgba(46,127,194,0.08); border: 1px solid rgba(46,127,194,0.2);
+      border-radius: 5px; padding: 4px 12px; cursor: pointer;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      transition: background 0.15s;
+    }
+    .fix-expand-btn:hover { background: rgba(46,127,194,0.15); }
+    .fix-row {
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .fix-row:last-child { border-bottom: none; }
+    .fix-row-top {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
     .fix-title { font-size: 12.5px; font-weight: 600; color: var(--navy); line-height: 1.3; }
     .fix-desc {
-      font-size: 11.5px; color: var(--gray-600); line-height: 1.5;
-      padding: 10px 16px 14px; border-top: 1px solid var(--gray-100);
+      font-size: 13.5px; color: #5c5c5c; line-height: 1.5;
+      margin-top: 8px; display: none;
     }
+    .fix-list.expanded .fix-desc { display: block; }
 
     /* FOOTER */
     /* ── PAGE BANDS ─────────────────────────────────────── */
@@ -522,7 +543,7 @@
     .band-inprogress .feature-card { background: #ffffff; border-color: var(--gray-200); box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
     .band-inprogress .feature-card.inprog { border-left-color: var(--amber); }
     .band-inprogress .feature-title { color: var(--navy); }
-    .band-inprogress .feature-desc  { color: var(--navy); }
+    .band-inprogress .feature-desc  { color: #5c5c5c; }
     .band-inprogress .feature-tag.progress { background: rgba(245,166,35,0.12); color: #8a5a08; border-color: rgba(245,166,35,0.28); }
     .band-inprogress .feature-tag.indev    { background: rgba(46,127,194,0.1);  color: var(--blue); border-color: rgba(46,127,194,0.22); }
 
@@ -536,7 +557,7 @@
     /* scope-card-dark (major cards) keep their navy styling — no override needed */
     .band-upcoming .scope-card-small { background: var(--white); border-color: var(--gray-200); box-shadow: var(--shadow); }
     .band-upcoming .scope-small-title { color: var(--gray-800); }
-    .band-upcoming .scope-small-desc  { color: var(--gray-600); }
+    .band-upcoming .scope-small-desc  { color: #5c5c5c; }
     .band-upcoming .scope-small-est   { color: var(--navy); border-color: var(--gray-200); }
     .band-upcoming .badge.review   { background: rgba(46,127,194,0.08); color: var(--blue); border-color: rgba(46,127,194,0.15); }
     .band-upcoming .badge.hold     { background: rgba(0,0,0,0.05); color: var(--gray-600); border-color: var(--gray-200); }
@@ -952,63 +973,67 @@
       <span class="platform-sub-title">Bug Fixes &amp; Reliability</span>
       <span class="platform-sub-line"></span>
     </div>
-    <div class="fix-grid">
+    <div class="fix-list" id="fixList">
+      <div class="fix-list-header">
+        <span class="fix-list-count">7 fixes shipped</span>
+        <button class="fix-expand-btn" id="fixExpandBtn" onclick="(function(){var l=document.getElementById('fixList'),b=document.getElementById('fixExpandBtn'),on=l.classList.toggle('expanded');b.textContent=on?'Collapse Details':'Expand Details';})()">Expand Details</button>
+      </div>
 
-      <details class="fix-card">
-        <summary>
-          <span class="feature-tag fixed">Fixed &middot; April 14</span>
+      <div class="fix-row">
+        <div class="fix-row-top">
           <div class="fix-title">Supplier Buyer Account Security Gap</div>
-        </summary>
+          <span class="feature-tag fixed">Fixed &middot; April 14</span>
+        </div>
         <div class="fix-desc">A validation gap allowed suppliers entering unrecognized email addresses in the buyer field to inadvertently create new buyer accounts. Input validation added to block unrecognized addresses at submission.</div>
-      </details>
+      </div>
 
-      <details class="fix-card">
-        <summary>
-          <span class="feature-tag fixed">Fixed &middot; March 25</span>
+      <div class="fix-row">
+        <div class="fix-row-top">
           <div class="fix-title">AVA Admin Proxy Login Permissions</div>
-        </summary>
+          <span class="feature-tag fixed">Fixed &middot; March 25</span>
+        </div>
         <div class="fix-desc">A subset of AVA admin users lacked the permissions required to use the proxy login feature. Permissions audited and corrected; all AVA admins now have consistent proxy access.</div>
-      </details>
+      </div>
 
-      <details class="fix-card">
-        <summary>
-          <span class="feature-tag fixed">Fixed &middot; March 10</span>
+      <div class="fix-row">
+        <div class="fix-row-top">
           <div class="fix-title">Homepage Opportunities PDF Link</div>
-        </summary>
+          <span class="feature-tag fixed">Fixed &middot; March 10</span>
+        </div>
         <div class="fix-desc">The Opportunities PDF link in the portal footer was pointing to the 2025 document. Updated to the 2026 guide.</div>
-      </details>
+      </div>
 
-      <details class="fix-card">
-        <summary>
-          <span class="feature-tag fixed">Fixed &middot; February 27</span>
+      <div class="fix-row">
+        <div class="fix-row-top">
           <div class="fix-title">Arla Foods Order Total Miscalculation</div>
-        </summary>
+          <span class="feature-tag fixed">Fixed &middot; February 27</span>
+        </div>
         <div class="fix-desc">A bug in the order total calculation for the 3/7 flyer was producing incorrect billing amounts. Identified via client-submitted order data and pushed to production.</div>
-      </details>
+      </div>
 
-      <details class="fix-card">
-        <summary>
-          <span class="feature-tag fixed">Fixed &middot; January 29</span>
+      <div class="fix-row">
+        <div class="fix-row-top">
           <div class="fix-title">Password Reset Link Expiry Messaging</div>
-        </summary>
+          <span class="feature-tag fixed">Fixed &middot; January 29</span>
+        </div>
         <div class="fix-desc">Password reset links had no visible expiry indication, causing repeated supplier access complaints. On-screen messaging updated to clearly communicate the two-hour expiry window (24 hours for admin accounts).</div>
-      </details>
+      </div>
 
-      <details class="fix-card">
-        <summary>
-          <span class="feature-tag fixed">Fixed &middot; January 15</span>
+      <div class="fix-row">
+        <div class="fix-row-top">
           <div class="fix-title">Analytics: Themed Campaign Revenue Calculation</div>
-        </summary>
+          <span class="feature-tag fixed">Fixed &middot; January 15</span>
+        </div>
         <div class="fix-desc">Themed Campaign revenue totals were miscalculating due to the same underlying logic error previously resolved for Digital Media packages. Patched across all affected placement types.</div>
-      </details>
+      </div>
 
-      <details class="fix-card">
-        <summary>
-          <span class="feature-tag fixed">Fixed &middot; January 6</span>
+      <div class="fix-row">
+        <div class="fix-row-top">
           <div class="fix-title">Analytics: Digital Media Custom Package Pricing</div>
-        </summary>
+          <span class="feature-tag fixed">Fixed &middot; January 6</span>
+        </div>
         <div class="fix-desc">Custom packages were calculating revenue totals using 2025 pricing. Corrected to apply 2026 pricing across all custom package configurations.</div>
-      </details>
+      </div>
 
     </div>
   </div>
@@ -1074,9 +1099,9 @@
     <div class="scope-card-dark accent-navy">
       <span class="scope-dark-badge"><span class="scope-dark-dot"></span>Scope In Review</span>
       <div class="scope-dark-title">Shared Order Functionality</div>
-      <div class="scope-dark-desc">Allow multiple users within a company to collaborate on a single order - enabling brokers and suppliers to co-manage submissions, share draft access, and coordinate offer details without duplicating orders or routing work through email outside the portal.</div>
+      <div class="scope-dark-desc">Introduces a technical link between separate orders placed by different parties for the same product. Admins designate orders as shared, assign parent/child relationships, and enter allocated costs per supplier. Resolves an analytics accuracy issue where unlinked shared orders skew revenue totals - children are excluded from calculations until allocated amounts are entered, at which point each order reports its respective cost.</div>
       <div class="scope-dark-footer">
-        <span class="scope-dark-est">TBD <span>scoping in progress</span></span>
+        <span class="scope-dark-est">42 hrs / $6,200 <span>estimated</span></span>
       </div>
     </div>
 
@@ -1094,9 +1119,9 @@
     <div class="scope-card-dark">
       <span class="scope-dark-badge"><span class="scope-dark-dot"></span>Scope In Review</span>
       <div class="scope-dark-title">Analytics Dashboard - Phase I MVP</div>
-      <div class="scope-dark-desc">A dedicated analytics view built into the Extra Savings Portal giving PromoPoint team members direct visibility into circular performance - revenue trends by time period, performance by placement type, top brands and categories, and period-over-period comparisons. Includes export to CSV or PDF.</div>
+      <div class="scope-dark-desc">A dedicated analytics view built into the Extra Savings Portal giving PromoPoint team members direct visibility into circular performance - revenue trends by time period, performance by placement type, top brands, and period-over-period comparisons. Includes export to CSV or PDF.</div>
       <div class="scope-dark-footer">
-        <span class="scope-dark-est">55-70 hrs / $8,200-$9,750 <span>estimated</span></span>
+        <span class="scope-dark-est">55–65 hrs / $8,200–$9,750 <span>estimated</span></span>
       </div>
     </div>
 
@@ -1130,15 +1155,15 @@
 
     <!-- Analytics Dashboard Phase II -->
     <div class="scope-card-small">
-      <span class="badge review"><span class="badge-dot"></span>In Review</span>
+      <span class="badge review"><span class="badge-dot"></span>Scope In Review</span>
       <div class="scope-small-title">Analytics Dashboard - Phase II</div>
       <div class="scope-small-desc">Expands Phase I into a full analytics platform with purpose-built dashboard views for sales, leadership, and supplier audiences, plus category data integration and role-based access controls.</div>
-      <div class="scope-small-est">~$25,000–$40,000</div>
+      <div class="scope-small-est">$15,000–$30,000</div>
     </div>
 
     <!-- Block Orders for Nonpayment -->
     <div class="scope-card-small">
-      <span class="badge review"><span class="badge-dot"></span>In Review</span>
+      <span class="badge review"><span class="badge-dot"></span>Scope In Review</span>
       <div class="scope-small-title">Block Orders for Nonpayment</div>
       <div class="scope-small-desc">Prevent suppliers with outstanding balances from placing new orders until payment is resolved, with admin controls to manage exceptions and restore access.</div>
       <div class="scope-small-est">TBD</div>
@@ -1170,7 +1195,7 @@
 
     <!-- Draft Alerts -->
     <div class="scope-card-small">
-      <span class="badge review"><span class="badge-dot"></span>In Review</span>
+      <span class="badge review"><span class="badge-dot"></span>Scope In Review</span>
       <div class="scope-small-title">Draft Order Alert System</div>
       <div class="scope-small-desc">Two-email reminder sequence for suppliers with unsubmitted drafts, plus a Wednesday admin digest listing all outstanding draft details - order number, name, email, and phone.</div>
       <div class="scope-small-est">5–7 hrs per scope</div>
@@ -1186,7 +1211,7 @@
 
     <!-- Supplier Onboarding -->
     <div class="scope-card-small">
-      <span class="badge approved"><span class="badge-dot"></span>Scoped - Ready to Schedule</span>
+      <span class="badge review"><span class="badge-dot"></span>Scope In Review</span>
       <div class="scope-small-title">Supplier Onboarding: Training &amp; Video</div>
       <div class="scope-small-desc">An in-portal training module paired with a produced training video that guides new users step-by-step through the platform - reducing support volume and improving first-cycle submission quality.</div>
       <div class="scope-small-est">10 hrs &nbsp;/&nbsp; ~$1,500</div>
@@ -1194,7 +1219,7 @@
 
     <!-- Updating Buyers -->
     <div class="scope-card-small">
-      <span class="badge review"><span class="badge-dot"></span>In Review</span>
+      <span class="badge hold"><span class="badge-dot"></span>Needs Info</span>
       <div class="scope-small-title">Updating Buyers</div>
       <div class="scope-small-desc">Tooling for PromoPoint admins to manage and update buyer records - correcting buyer names, email addresses, and assignments across existing orders without manual database intervention.</div>
       <div class="scope-small-est">TBD</div>
